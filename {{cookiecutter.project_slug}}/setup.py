@@ -1,8 +1,21 @@
 from setuptools import setup, find_packages
 
+EXTRAS_REQUIRE = {
+    'tests': [
+        "pytest",
+        "coverage[toml]>=5.0.2",
+    ],
+}
+EXTRAS_REQUIRE['dev'] = EXTRAS_REQUIRE['tests'] + [
+    "black",
+    "twine",
+    "wheel",
+]
+
 setup(
     name="{{cookiecutter.project_slug}}",
     description="{{cookiecutter.project_description}}",
+    version='0.0.0',
     author="Mark Smith",
     author_email="judy@judy.co.uk",
     
@@ -13,14 +26,7 @@ setup(
         "click      ~= 7.1",
         {%- endif %}
     ],
-    extras_require={
-        "dev": [
-            "black",
-            "pytest",
-            "twine",
-            "wheel",
-        ]
-    },
+    extras_require=EXTRAS_REQUIRE,
     {% if cookiecutter.cli != "n" -%}
     entry_points="""
         [console_scripts]

@@ -4,8 +4,10 @@
 
 {% if cookiecutter.cli != "n" -%}
 import click
+{%- endif %}
 
 
+{% if cookiecutter.cli != "n" -%}
 @click.command()
 {%- endif %}
 def main():
