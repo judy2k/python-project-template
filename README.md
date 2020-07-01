@@ -11,8 +11,8 @@ A simple, opinionated Python project template incorporating the following featur
 ## To Do
 
 * Add code coverage config
-* Add tox or nox
 * Add a license file.
 * Add a contributors document.
+* Think about changelog management.
 * Add github PR template etc.
 * Add config for CI testing?
