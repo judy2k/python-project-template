@@ -1,16 +1,14 @@
 [project]
-name = "example"
+name = "{{project_name}}"
 version = "0.1.0"
-description = "Add your description here"
+description = "{{description}}"
 readme = "README.md"
-authors = [
-    { name = "Mark Smith", email = "judy@judy.co.uk" }
-]
+authors = [{ name = "Mark Smith", email = "judy@judy.co.uk" }]
 requires-python = ">=3.13"
 dependencies = []
 
 [project.scripts]
-example = "example:main"
+{{module_name}} = "{{module_name}}:main"
 
 [build-system]
 requires = ["hatchling"]
