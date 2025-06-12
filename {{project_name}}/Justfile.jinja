@@ -1,0 +1,24 @@
+# List the targets in the Justfile
+default:
+    just --list
+
+# Install project dependencies into a virtual environment
+install:
+    uv venv
+
+# Run the {{module_name}} CLI
+run:
+    uv run {{module_name}}
+
+# Run tests
+test :
+    uv run pytest
+
+# Lint the code
+check:
+    uv run ruff check
+    uv run interrogate
+
+# Format the code
+fix:
+    uv run ruff format
