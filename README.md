@@ -9,6 +9,7 @@ A [copier] template, containing my preferred initial project setup.
 * [hatchling] for builds
 * [pytest] for tests
 * [ruff] for linting & formatting
+* [interrogate] for pydoc coverage
 * [Just] for task running
 
 ## To-Do
@@ -30,6 +31,7 @@ A [copier] template, containing my preferred initial project setup.
 [copier]: https://copier.readthedocs.io/en/stable/reference/cli/
 [GitHub Actions]: https://docs.github.com/en/actions
 [hatchling]: https://pypi.org/project/hatchling/
+[interrogate]: https://pypi.org/project/interrogate/
 [Just]: https://just.systems/man/en/
 [pre-commit]: https://pre-commit.com/
 [pytest]: https://docs.pytest.org/en/stable/
