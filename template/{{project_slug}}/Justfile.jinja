@@ -11,8 +11,8 @@ run:
     uv run {{package_name}}
 
 # Run tests
-test :
-    uv run pytest
+test test='':
+    uv run pytest {% raw %}{{test}}{% endraw %}
 
 # Lint the code
 check:
