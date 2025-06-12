@@ -1,18 +1,24 @@
 [project]
 name = "{{project_slug}}"
-version = "0.1.0"
 description = "{{description}}"
 readme = "README.md"
 authors = [{ name = "Mark Smith", email = "judy@judy.co.uk" }]
 requires-python = ">=3.13"
 dependencies = []
+dynamic = ["version"]
 
 [project.scripts]
 {{package_name}} = "{{package_name}}:main"
 
 [build-system]
-requires = ["hatchling"]
+requires = ["hatchling", "hatch-vcs"]
 build-backend = "hatchling.build"
+
+[tool.hatch.version]
+source = "vcs"
+
+[tool.hatch.build.hooks.vcs]
+version-file = "src/{{package_name}}/_version.py"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/{{package_name}}"]
