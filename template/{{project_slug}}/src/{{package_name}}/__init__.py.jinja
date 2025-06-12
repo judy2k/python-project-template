@@ -2,8 +2,12 @@
 {{package_name}} - {{description}}
 """
 
+from importlib.metadata import version
+
+__version__ = version(__name__)
+
 
 def main() -> None:
     """The {{package_name}} CLI entrypoint."""
 
-    print("Hello from {{project_name}}!")
+    print(f"Hello from {{project_name}} v{__version__}!")

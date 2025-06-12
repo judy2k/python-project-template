@@ -17,9 +17,6 @@ build-backend = "hatchling.build"
 [tool.hatch.version]
 source = "vcs"
 
-[tool.hatch.build.hooks.vcs]
-version-file = "src/{{package_name}}/_version.py"
-
 [tool.hatch.build.targets.wheel]
 packages = ["src/{{package_name}}"]
 
