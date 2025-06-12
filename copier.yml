@@ -2,10 +2,15 @@ project_name:
   type: str
   help: What is the name of your project?
 
-module_name:
+project_slug:
   type: str
-  help: What is the name of your module?
-  default: '{{project_name}}'
+  help: Project slug (directory name)?
+  default: '{{project_name|lower|replace(" ", "-")}}'
+
+package_name:
+  type: str
+  help: What is the name of your python package?
+  default: '{{project_slug|replace("-", "_")}}'
 
 description:
   type: str
