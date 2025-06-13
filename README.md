@@ -12,11 +12,11 @@ A [copier] template, containing my preferred initial project setup.
 * [interrogate] for pydoc coverage
 * [Just] for task running
 * Versioning using git tags.
+* [pre-commit] for Git hooks
 
 ## To-Do
 
 * [GitHub Actions] for CI
-* [pre-commit] for Git hooks
 * [Sphinx] docs
 * Changelog management
 * License file

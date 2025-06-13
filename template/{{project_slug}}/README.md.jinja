@@ -17,9 +17,17 @@ or use it as a reference for how to do the following:
 
 Run `just fix` and `just check`, and address any issues before pushing to GitHub.
 
-# Versioning
+### Pre-commit
+
+Config is provided for [pre-commit],
+to run some checks and fixes before each git commit.
+Install with `uvx pre-commit install`.
+
+### Versioning
 
 The current version is picked up automatically from git.
 To update the version,
 tag the commit with `git tag x.y.z`.
 There's no reason to tag development versions – those version numbers should be generated automatically.
+
+[pre-commit]: https://pre-commit.com/
