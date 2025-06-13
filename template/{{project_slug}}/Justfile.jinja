@@ -1,11 +1,12 @@
 # List the targets in the Justfile
-default:
-    just --list
+_default:
+    @just --list --list-prefix '👉  '
 
 # Install project dependencies into a virtual environment
 install:
     uv venv
 
+# Build the Python package
 build:
     uv build
 
@@ -13,7 +14,7 @@ build:
 run:
     uv run {{package_name}}
 
-# Run tests
+# Run tests (include an optional test path to select tests to run.)
 test test='':
     uv run pytest {% raw %}{{test}}{% endraw %}
 
