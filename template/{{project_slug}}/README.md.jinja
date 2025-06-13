@@ -12,4 +12,14 @@ or use it as a reference for how to do the following:
 * `just fix` – reformat your code with Ruff
 * `just test` – run the tests
 * `just check` – run Ruff and Interrogate to lint your code and docstrings
+* `just build` - build the Python package, using hatchling.
 * `just` – List all targets in the Justfile
+
+Run `just fix` and `just check`, and address any issues before pushing to GitHub.
+
+# Versioning
+
+The current version is picked up automatically from git.
+To update the version,
+tag the commit with `git tag x.y.z`.
+There's no reason to tag development versions – those version numbers should be generated automatically.
