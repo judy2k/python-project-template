@@ -1,0 +1,10 @@
+recreate:
+    #!/usr/bin/env sh
+    rm -rf sample-project ./test
+    copier copy --defaults ../ .
+    cd sample-project && (
+        git init
+        git add .
+        git commit -m "Initial commit"
+        git tag 0.0.42
+    )
