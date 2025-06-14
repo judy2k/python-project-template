@@ -9,3 +9,16 @@ def main() -> None:
     """The {{package_name}} CLI entrypoint."""
 
     print(f"Hello from {{project_name}} v{__version__}!")
+
+def a_complicated_function(a: int, b: str) -> bool:
+    """A complicated function.
+
+    I've written this to test the napoleon plugin.
+
+    Args:
+        a: A numeric argument.
+        b: A string, of course.
+
+    Returns:
+        A boolean, saying if the thing is true or not.
+    """
