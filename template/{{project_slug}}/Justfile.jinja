@@ -10,6 +10,16 @@ install:
 build:
     uv build
 
+# Build the docs with sphinx
+docs-build:
+    uv run --group docs \
+        sphinx-build \
+            --nitpicky \
+            --show-traceback \
+            --fail-on-warning \
+            --builder html \
+            docs docs/_build/html
+
 # Run the {{package_name}} CLI
 run:
     uv run {{package_name}}

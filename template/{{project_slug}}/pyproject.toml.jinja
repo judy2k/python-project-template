@@ -25,9 +25,18 @@ dev = [
     "interrogate>=1.7.0",
     "pytest>=8.4.0",
     "ruff>=0.11.13",
+    # The following two are required in dev for dynamic version deduction:
     "hatchling",
     "hatch-vcs",
+]
+docs = [
+    "sphinx>=8.2.3",
+    "myst-parser",
 ]
 
 [tool.ruff.format]
 docstring-code-format = true
+
+[tool.interrogate]
+exclude = ["docs",]
+style = "google"
