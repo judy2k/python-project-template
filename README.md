@@ -9,6 +9,7 @@ A [copier] template, containing my preferred initial project setup.
 * [hatchling] for builds
 * [pytest] for tests
 * [ruff] for linting & formatting
+* [Sphinx] docs
 * [interrogate] for pydoc coverage
 * [Just] for task running
 * Versioning using git tags.
@@ -17,8 +18,7 @@ A [copier] template, containing my preferred initial project setup.
 ## To-Do
 
 * [GitHub Actions] for CI
-* [Sphinx] docs
-* Changelog management
+* Changelog management with [towncrier]
 * License file
 * GitHub PR template, etc.
 * Code coverage
@@ -36,7 +36,6 @@ the version number is frozen at the version set when the package was installed a
 A slightly [hacky][hatch-vcs-footgun] approach has been used in `_version.py` to provide an accurate "live" version number in all cases.
 If you don't like it, remove `_get_hatch_version()` from `_version.py` and "hatchling" and "hatch-vcs" from the "dev" group in `pyproject.toml`.
 
-
 ## Open Questions
 
 * Should the CLI be optional?
@@ -53,5 +52,5 @@ If you don't like it, remove `_get_hatch_version()` from `_version.py` and "hatc
 [pytest]: https://docs.pytest.org/en/stable/
 [ruff]: https://docs.astral.sh/ruff/
 [Sphinx]: https://www.sphinx-doc.org/en/master/index.html
+[towncrier]: https://github.com/twisted/towncrier
 [uv]: https://docs.astral.sh/uv/
-[versioneer]: https://github.com/python-versioneer/python-versioneer
