@@ -4,7 +4,7 @@ A [copier] template, containing my preferred initial project setup.
 
 ## Features
 
-* A `src` directory, because you should
+* A `src` directory, because you should.
 * [uv] for Python and dependency management
 * [hatchling] for builds
 * [pytest] for tests
