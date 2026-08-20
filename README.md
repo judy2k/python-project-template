@@ -13,7 +13,7 @@ A [copier] template, containing my preferred initial project setup.
 * [interrogate] for pydoc coverage
 * [Just] for task running
 * Versioning using git tags.
-* [pre-commit] for Git hooks
+* [prek] for Git hooks
 
 ## To-Do
 
@@ -48,7 +48,7 @@ If you don't like it, remove `_get_hatch_version()` from `_version.py` and "hatc
 [hatchling]: https://pypi.org/project/hatchling/
 [interrogate]: https://pypi.org/project/interrogate/
 [Just]: https://just.systems/man/en/
-[pre-commit]: https://pre-commit.com/
+[prek]: https://prek.j178.dev
 [pytest]: https://docs.pytest.org/en/stable/
 [ruff]: https://docs.astral.sh/ruff/
 [Sphinx]: https://www.sphinx-doc.org/en/master/index.html
