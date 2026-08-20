@@ -17,3 +17,26 @@ package_name:
 description:
   type: str
   help: So ... what are you building?
+
+_message_after_copy: |
+    Your project "{{ project_name }}" has been created successfully!
+
+    Next steps:
+
+    1. Change directory:
+
+       $ cd {{ _copier_conf.dst_path }}
+
+    2. Install prek hooks:
+
+       $ prek install
+
+_tasks:
+  - command: "git -C {{ project_name }} init"
+    when: "{{ _copier_operation == 'copy' }}"
+  # - command: "prek install {{ project_name }}"
+  #   when: "{{ _copier_operation == 'copy' }}"
+  - command: "git -C {{ project_name }} add ."
+    when: "{{ _copier_operation == 'copy' }}"
+  - command: "git -C {{ project_name }} commit -m 'Project scaffold.'"
+    when: "{{ _copier_operation == 'copy' }}"
